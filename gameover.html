@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <link rel="stylesheet" href="style.css">
+</header>
+<body>
+  <div id="end">
+  <h1>Game Over!</h1>
+  Highest Score: <p id="highest"></p>
+  Your Score: <p id="scores"></p>
+  <button type="button" id="button">Restart!</button>
+  </div>
+  <script>
+  var highscore = localStorage.getItem("highscore");
+  var score = localStorage.getItem("score");
+  document.getElementById('scores').innerHTML=score;
+  document.getElementById('highest').innerHTML=highscore;
+  document.getElementById("button").addEventListener("click", function() {
+    window.location = "board.html";
+  });
+  </script>
+  <script src="game.js"></script>
+</body>
+</html>
